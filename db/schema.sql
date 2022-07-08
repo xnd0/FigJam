@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS figjam_db;
+CREATE DATABASE figjam_db;
