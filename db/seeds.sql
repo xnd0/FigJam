@@ -5,6 +5,8 @@ VALUES  (001, "The Refugee", "Tom Petty"),
                 (004, "Total Eclipse of the Heart", "Bonnie Tyler"),
                 (005, "Never Gonna Give You Up", "Rick Astley"),
                 (006, "Livin' on a Prayer", "Bon Jovi")
+                (007, "Me Porto Bonito", "Bad Bunny")
+                (008, "Love Will Never Do Without You", "Janet Jackson")
 
 
 INSERT INTO videos (songs, artists)
@@ -14,4 +16,6 @@ VALUES (1, "<https://youtu.be/fFnOfpIJL0M>"),
                 (4, "<https://youtu.be/lcOxhH8N3Bo>"),
                 (5, "<https://youtu.be/dQw4w9WgXcQ>")
                 (6, "<https://youtu.be/lDK9QqIzhwk>");
+                (7, "<https://youtu.be/saGYMhApaH8>");
+                (8, "<https://youtu.be/63zEDkg351c>")
 
