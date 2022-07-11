@@ -1,25 +1,25 @@
 const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Videos extends Model {}
+class Video extends Model {}
 
-Videos.init(
+Video.init(
     {
-       songs:{
-            type: DataTypes.STRING,
+        id:{
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        artists:{
+        video_link:{
             type: DataTypes.STRING
-        },
+        }
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
-        modelName: 'song'
+        modelName: 'video'
     }
 )
 
-module.exports = Videogit ;
+module.exports = Video;
