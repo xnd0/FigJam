@@ -10,16 +10,15 @@ VALUES  ("The Refugee", "Tom Petty"),
                 ("Love Will Never Do Without You", "Janet Jackson");
 
 
-INSERT INTO videos (video_link)
-VALUES ("<https://youtu.be/fFnOfpIJL0M>"),
-                ("<https://youtu.be/45cYwDMibGo>"),
-                ("<https://youtu.be/HNBCVM4KbUM>"),
-                ("<https://youtu.be/lcOxhH8N3Bo>"),
-                ("<https://youtu.be/dQw4w9WgXcQ>"),
-                ("<https://youtu.be/lDK9QqIzhwk>"),
-                ("<https://youtu.be/saGYMhApaH8>"),
-                ("<https://youtu.be/63zEDkg351c>");
-
+INSERT INTO videos (song_id, video_link)
+VALUES (1,"<https://youtu.be/fFnOfpIJL0M>"),
+                (2, "<https://youtu.be/45cYwDMibGo>"),
+                (3, "<https://youtu.be/HNBCVM4KbUM>"),
+                (4, "<https://youtu.be/lcOxhH8N3Bo>"),
+                (5, "<https://youtu.be/dQw4w9WgXcQ>"),
+                (6, "<https://youtu.be/lDK9QqIzhwk>"),
+                (7, "<https://youtu.be/saGYMhApaH8>"),
+                (8, "<https://youtu.be/63zEDkg351c>");
 
 INSERT INTO comments(song_id, comment_text)
 VALUES  (1, "I love this song!"),
