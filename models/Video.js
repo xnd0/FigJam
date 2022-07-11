@@ -12,6 +12,13 @@ Video.init(
         },
         video_link:{
             type: DataTypes.STRING
+        },
+        song_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'song',
+                key: 'id',
+            },
         }
     },
     {
