@@ -2,6 +2,13 @@
   <div class="col-md-6">
     <h2>Post</h2>
 
+  {{#each songs as |song| }}
+
+  {{ song.song_name }}
+
+
+  {{/each}}
+
     {{!-- <form class="form login-form">
       <div class="form-group">
         <label for="email-login">email:</label>
