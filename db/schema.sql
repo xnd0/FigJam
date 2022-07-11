@@ -4,7 +4,6 @@ CREATE DATABASE musicvids_db;
 
 USE musicvids_db;
 
-
 CREATE TABLE songs (
     id INT AUTO_INCREMENT PRIMARY KEY,
     artist_name VARCHAR(100) NOT NULL,
@@ -20,7 +19,10 @@ CREATE TABLE users (
 
 CREATE TABLE videos (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    video_link VARCHAR(250) NOT NULL
+    video_link VARCHAR(250) NOT NULL,
+	song_id INT,
+    FOREIGN KEY(song_id) 
+    REFERENCES songs (id)
 );
 
 CREATE TABLE comments (
