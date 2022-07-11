@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
     const songs = songData.map((song) => song.get({ plain: true }));
 
         res.render('post', {songs});
+        // res.json(songs);
 });
 
 // //GET a single song
