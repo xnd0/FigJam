@@ -16,5 +16,5 @@ CREATE TABLE artists (
 
 CREATE TABLE videos (
     id INT NOT NULL,
-    video_link VALUES --is this valid?--
+    video_link VALUES
 )
