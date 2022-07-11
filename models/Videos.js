@@ -22,4 +22,4 @@ Videos.init(
     }
 )
 
-module.exports = Videogit ;
+module.exports = Videos;
