@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const Song = require('../../models/songs.js');
+const Song = require('../../models/song.js');
 
 //GET all songs (not sure about my syntax here, please make corrections if needed)
 router.get('/', (req, res) => {
@@ -17,4 +17,3 @@ router.get('/:id', (req, res) => {
 
 module.exports = router;
     
-
