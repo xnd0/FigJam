@@ -1,0 +1,64 @@
+<div class="menu-container">
+  <div class="card-header col-md-12 text-center">
+    <h2>
+      FigJam 
+    </h2>
+  </div>
+  {{#each dishes as |dish|}}
+  <div class="dish col-md-4">
+    <p>
+      {{dish.id}}.
+      {{dish.dish_name}}
+    </p>
+  </div>
+  <div class="col-md-5">
+    <p>
+      Guest:
+      {{dish.guest_name}}
+    </p>
+  </div>
+  <div class="col-md-3">
+    🥜: {{#if dish.has_nuts}} Contains nuts {{else}} No nuts {{/if}}
+  </div>
+  {{/each}}
+  <!-- This is the form for adding a new dish -->
+  <div class="add-dish-container">
+    <h2>
+      What are you listening to right now?
+    </h2>
+    <form class="form login-form">
+      <label for="song_name">
+        Song Name:
+      </label>
+      <br />
+      <textarea id="song_name" name="song_name" rows="2" cols="30">
+      {{song_name}}}
+    </textarea>
+      <br />
+      <label for="description">
+        Description:
+      </label>
+      <br />
+      <textarea id="description" name="description" rows="5" cols="30">
+      {{description}}
+    </textarea>
+      <br />
+      <label for="username">
+        User Name:
+      </label>
+      <br />
+      <textarea id="user_name" name="user_name" rows="2" cols="30">
+      {{user_name}}
+    </textarea>
+      <br />
+      <br />
+      <button type="submit" value="Submit">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+
+<!--unsure what file to link to. I'm assuming js file-->
+<script src=>#</script>
