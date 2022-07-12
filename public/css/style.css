@@ -1,8 +1,11 @@
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
+  background-color: #F8F8F8;
 }
 
-.no-button {
+/* background-color: #F8F8F8; */
+
+/* .no-button {
   background: none;
   border: none;
   padding: 0;
@@ -10,15 +13,31 @@ header, .project:not(:last-child) {
   color: #1b89bc;
   text-decoration: none;
   font-size: 100%;
-}
+} */
 
 .no-button:hover {
-  color: #065b83;
+  color: #430a6e;
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+
+.fig {
+  width: 100px;
+  height: 100px;
+}
+
+#footer {
+  color: whitesmokes;
+  text-align: center;
+  padding: 20px;
+  font-size: larger;
+  border: 2px solid;
+}
+
+nav {
+  font-size: 25px;
+}
+
+h7 {
+  font-family: 'Andale Mono', monospace;
 }

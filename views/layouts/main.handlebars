@@ -10,8 +10,9 @@
 </head>
 
 <body>
+  <p>{{ format_date }}</p>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
+    <header class="display-flex justify-space-around align-center p-2">
       <img class = "fig" aria-label="figgin' cool" src = "/images/st,small,507x507-pad,600x600,f8f8f8.jpg"/>
       <h1>
         <a href="/">FigJam</a>
@@ -19,7 +20,7 @@
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
+        <a href="/profile">profile</a>
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
@@ -31,7 +32,7 @@
       {{{ body }}}
     </main>
     <footer>
-      
+      <p id="footer">@FigJam 🎼 Project 2022</p>
     </footer>
   </div>
 
