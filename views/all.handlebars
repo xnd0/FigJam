@@ -1,26 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FigJam!</title>
+  <link rel="stylesheet" href="css/all.css">
+
+</head>
+
+
 <div class="menu-container">
   <div class="card-header col-md-12 text-center">
     <h2>
       FigJam 
     </h2>
   </div>
-  {{!-- {{#each dishes as |dish|}}
-  <div class="dish col-md-4">
-    <p>
-      {{dish.id}}.
-      {{dish.dish_name}}
-    </p>
-  </div>
-  <div class="col-md-5">
-    <p>
-      Guest:
-      {{dish.guest_name}}
-    </p>
-  </div>
-  <div class="col-md-3">
-    🥜: {{#if dish.has_nuts}} Contains nuts {{else}} No nuts {{/if}}
-  </div>
-  {{/each}} --}}
+
   {{#each songs as |song| }}
 
   {{ song.song_name }}
@@ -51,7 +47,7 @@ document.getElementById("upload_widget").addEventListener("click", function(){
     <h2>
       What are you listening to right now?
     </h2>
-    <form class="form login-form">
+    <form class="login-form">
       <label for="song_name">
         Song Name:
       </label>
@@ -83,4 +79,4 @@ document.getElementById("upload_widget").addEventListener("click", function(){
 
 
 <!--unsure what file to link to. I'm assuming js file-->
-<script src=>#</script>
+<script src=""></script>
