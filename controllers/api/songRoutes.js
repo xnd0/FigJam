@@ -4,25 +4,28 @@
 
 
 const router = require('express').Router();
-const { Song } = require('../../models');
+const Song = require('../../models/Song');
 // const withAuth = require('../../utils/auth');
 
 
 
-// route to create/add a song using async/await
+// route to create/add a song using async/await -v3
 router.post('/', async (req, res) => {
-    try { 
-      const songData = await Song.create({
-        song_name: req.session.song_name,
-        artist_name: req.session.artist_name,
-    });
-    // if the song is successfully created, the new response will be returned as json
-    res.status(200).json(songData)
-  } catch (err) {
-    res.status(400).json(err);
-  }
-  });
-  
+    try {
+        const songData = await Song.create({
+            song_name: req.session.song_name,
+            artist_name: req.session.artist_name,
+        });
+        // if the song is successfully created, the new response will be returned as json
+        req.session.save(() => {
+            res.status(200).json(songData)
+        });
+    } catch (err) {
+        console.log(err)
+        res.status(400).json(err);
+    }
+});
+
 
 
 
@@ -34,7 +37,7 @@ router.post('/', async (req, res) => {
 //         song_name: req.session.song_name,
 //         artist_name: req.session.artist_name,
 //       });
-  
+
 //       res.status(200).json(newSong);
 //     } catch (err) {
 //       res.status(400).json(err);
@@ -52,11 +55,11 @@ router.post('/', async (req, res) => {
 //         artist_name: req.body.artist_name,
 //         // password: req.body.password,
 //       });
-  
+
 //       // Set up sessions with a 'loggedIn' variable set to `true`
 //     //   req.session.save(() => {
 //     //     req.session.loggedIn = true;
-  
+
 //         res.status(200).json(dbSongData);
 //     //   });
 //     } catch (err) {
@@ -67,4 +70,3 @@ router.post('/', async (req, res) => {
 
 
 module.exports = router;
-    

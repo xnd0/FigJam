@@ -4,7 +4,8 @@
 
 
 const router = require('express').Router()
-const Song = require('../models/song.js');
+// const Song = require('../models/song.js');
+const Song = require('../models/Song');
 
 
 // GET all songs 
