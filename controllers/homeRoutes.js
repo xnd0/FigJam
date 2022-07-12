@@ -39,14 +39,28 @@ router.get('/add-song', async (req, res) => {
 // });
 
 
+// LOGIN function
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
-    if (req.session.logged_in) {
-      res.redirect('/');
-      return;
-    }
+    // if (req.session.logged_in) {
+    //   res.redirect('/');
+    //   return;
+    // }
   
     res.render('login');
   });
+
+
+
+// // LOGOUT function
+// router.post('/logout', (req, res) => {
+//     if (req.session.logged_in) {
+//       req.session.destroy(() => {
+//         res.status(204).end();
+//       });
+//     } else {
+//       res.status(404).end();
+//     }  
+// });    
 
 module.exports = router;
