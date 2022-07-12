@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     // Serialize data so the template can read it
     const songs = songData.map((song) => song.get({ plain: true }));
 
-    res.render('post', { songs });
+    res.render('home', { songs });
     // res.json(songs);
 });
 
