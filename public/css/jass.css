@@ -12,6 +12,13 @@ html {
   /* 2 */
 }
 
+.fig {
+  width: 90px;
+  height: 90px;
+}
+
+
+
 /* Sections
    ========================================================================== */
 /**
@@ -420,8 +427,9 @@ button {
 }
 
 a {
-  color: #1b89bc;
+  color: #861bbc;
   text-decoration: none;
+  font-family: "Goudy Bookletter 1911", sans-serif;
 }
 
 a:hover {
