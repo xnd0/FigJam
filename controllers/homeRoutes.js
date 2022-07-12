@@ -20,6 +20,15 @@ router.get('/', async (req, res) => {
     // res.json(songs);
 });
 
+router.get('/addsong', async (req, res) => {
+    const songData = await Song.findAll()
+    console.log(songData);
 
+    // Serialize data so the template can read it
+    const songs = songData.map((song) => song.get({ plain: true }));
+
+    res.render('all', {songs});
+    // res.json(songs);
+});
 
 module.exports = router;

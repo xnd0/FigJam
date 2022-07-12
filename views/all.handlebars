@@ -4,23 +4,7 @@
       FigJam 
     </h2>
   </div>
-  {{#each dishes as |dish|}}
-  <div class="dish col-md-4">
-    <p>
-      {{dish.id}}.
-      {{dish.dish_name}}
-    </p>
-  </div>
-  <div class="col-md-5">
-    <p>
-      Guest:
-      {{dish.guest_name}}
-    </p>
-  </div>
-  <div class="col-md-3">
-    🥜: {{#if dish.has_nuts}} Contains nuts {{else}} No nuts {{/if}}
-  </div>
-  {{/each}}
+
   <!-- This is the form for adding a new dish -->
   <div class="add-dish-container">
     <h2>
@@ -32,7 +16,7 @@
       </label>
       <br />
       <textarea id="song_name" name="song_name" rows="2" cols="30">
-      {{song_name}}}
+
     </textarea>
       <br />
       <label for="description">
@@ -40,7 +24,7 @@
       </label>
       <br />
       <textarea id="description" name="description" rows="5" cols="30">
-      {{description}}
+
     </textarea>
       <br />
       <label for="username">
@@ -48,7 +32,7 @@
       </label>
       <br />
       <textarea id="user_name" name="user_name" rows="2" cols="30">
-      {{user_name}}
+
     </textarea>
       <br />
       <br />
@@ -57,8 +41,15 @@
       </button>
     </form>
   </div>
+  {{#each songs as |song|}}
+<div>
+  <p>{{song.song_name}}</p>
+  <p>{{song.artist_name}}</p>
+
+</div>
+{{/each}}
 </div>
 
 
 <!--unsure what file to link to. I'm assuming js file-->
-<script src=>#</script>
+<script src="./js/profile.js"></script>
