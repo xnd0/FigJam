@@ -1,29 +1,71 @@
-const router = require('express').Router()
-const Song = require('../../models/song.js');
+// ------------------------- //
+// ----- songRoutes.js ----- //
+// ------------------------- //
+
+
+const router = require('express').Router();
+const Song = require('../../models/Song');
+// const { Song } = require('../../models');
+// const withAuth = require('../../utils/auth');
+
+
+// route to create/add a song using async/await -v3
+router.post('/', async (req, res) => {
+    try {
+        const songData = await Song.create({
+            song_name: req.body.song_name,
+            artist_name: req.body.artist_name,
+        });
+        // if the song is successfully created, the new response will be returned as json
+        // req.session.save(() => {
+            res.status(200).json(songData)
+        // });
+    } catch (err) {
+        console.log(err)
+        res.status(400).json(err);
+    }
+});
+
+
+
+// // Create new post -v2
+// router.post('/', withAuth, async (req, res) => {
+//     try {
+//       const newSong = await Song.create({
+//         ...req.body,
+//         song_name: req.session.song_name,
+//         artist_name: req.session.artist_name,
+//       });
+
+//       res.status(200).json(newSong);
+//     } catch (err) {
+//       res.status(400).json(err);
+//     }
+//   });
 
 
 
 
+// // CREATE new post -v1
+// router.post('/', async (req, res) => {
+//     try {
+//       const dbSongData = await Song.create({
+//         song_name: req.body.song_name,
+//         artist_name: req.body.artist_name,
+//         // password: req.body.password,
+//       });
 
+//       // Set up sessions with a 'loggedIn' variable set to `true`
+//     //   req.session.save(() => {
+//     //     req.session.loggedIn = true;
 
+//         res.status(200).json(dbSongData);
+//     //   });
+//     } catch (err) {
+//       console.log(err);
+//       res.status(500).json(err);
+//     }
+//   });
 
-
-
-
-
-//GET all songs (not sure about my syntax here, please make corrections if needed)
-// router.get('/', (req, res) => {
-//     Song.findAll().then((songData) => {
-//         res.json(songData);
-//     })
-// });
-
-// //GET a single song
-// router.get('/:id', (req, res) => {
-//     Song.findByPk(req.params.id).then((songData) =>{
-//         res.json(songData)
-//     });
-// });
 
 module.exports = router;
-    
