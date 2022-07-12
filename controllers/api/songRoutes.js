@@ -3,31 +3,48 @@
 // ------------------------- //
 
 
-const router = require('express').Router()
+const router = require('express').Router();
 const { Song } = require('../../models');
-const withAuth = require('../../utils/auth');
+// const withAuth = require('../../utils/auth');
 
 
 
-// Create new post
-router.post('/', withAuth, async (req, res) => {
-    try {
-      const newSong = await Song.create({
-        ...req.body,
+// route to create/add a song using async/await
+router.post('/', async (req, res) => {
+    try { 
+      const songData = await Song.create({
         song_name: req.session.song_name,
         artist_name: req.session.artist_name,
-      });
-  
-      res.status(200).json(newSong);
-    } catch (err) {
-      res.status(400).json(err);
-    }
+    });
+    // if the song is successfully created, the new response will be returned as json
+    res.status(200).json(songData)
+  } catch (err) {
+    res.status(400).json(err);
+  }
   });
+  
+
+
+
+// // Create new post -v2
+// router.post('/', withAuth, async (req, res) => {
+//     try {
+//       const newSong = await Song.create({
+//         ...req.body,
+//         song_name: req.session.song_name,
+//         artist_name: req.session.artist_name,
+//       });
+  
+//       res.status(200).json(newSong);
+//     } catch (err) {
+//       res.status(400).json(err);
+//     }
+//   });
 
 
 
 
-// // CREATE new post
+// // CREATE new post -v1
 // router.post('/', async (req, res) => {
 //     try {
 //       const dbSongData = await Song.create({
