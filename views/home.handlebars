@@ -33,7 +33,13 @@
           <div>by
             <h3>{{artist_name}}</h3>
           </div>
-            <img src="{{ url }}">
+          <img src="{{ url }}">
+
+          {{#each comments as |comment| }}
+
+          {{comment_text}}
+
+          {{/each}}
 
         </div>
         <div class="col-md-4">

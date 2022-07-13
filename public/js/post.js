@@ -17,7 +17,7 @@ const post = async (event) => {
   });
 
   if (response.ok) {
-    // document.location.replace('/songs');
+    document.location.replace('/');
   } else {
     alert('Failed to create project');
   }
