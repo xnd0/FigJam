@@ -1,12 +1,9 @@
 
 
 
-
-
-
-const post = async () => {
-
-  //make these good
+let url;
+const post = async (event) => {
+  event.preventDefault();
   const song_name = document.querySelector('#song_name').value.trim();
   const artist_name = document.querySelector('#artist_name').value.trim();
   const comment_text = document.querySelector('#comment_text').value.trim();
@@ -24,7 +21,24 @@ const post = async () => {
   } else {
     alert('Failed to create project');
   }
+
   };
-  
-  document.querySelector('#post').addEventListener('click', logout);
-  
+  var myWidget = cloudinary.createUploadWidget({
+  cloudName: 'deubd4mph', 
+  uploadPreset: 'paup0jwu'}, (error, result) => { 
+    if (!error && result && result.event === "success") { 
+      console.log('Done! Here is the image info: ', result.info); 
+      url = result.info.url;
+      const image = document.createElement("img");
+      image.setAttribute("src", url);
+      const songPhoto = document.querySelector(".song-photo");
+      songPhoto.append(image);
+    }
+  }
+)
+
+document.getElementById("upload_widget").addEventListener("click", function(){
+    myWidget.open();
+  }, false);
+  document.querySelector('.song-form').addEventListener('submit', post);
+   
