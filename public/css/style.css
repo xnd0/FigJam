@@ -41,3 +41,8 @@ nav {
 h7 {
   font-family: 'Andale Mono', monospace;
 }
+
+#currentDate {
+  font-family: 'Andale Mono', monospace;
+  background-color: #c4b4cf;
+}
