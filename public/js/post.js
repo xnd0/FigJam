@@ -1,6 +1,3 @@
-
-
-
 let url;
 const post = async (event) => {
   event.preventDefault();
