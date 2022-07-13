@@ -1,42 +1,42 @@
 [
     {
         "song_id": 1,
-        "video_link": "<https://youtu.be/fFnOfpIJL0M>",
-        "photo": "<https://res.cloudinary.com/deubd4mph/image/upload/v1657315438/figJam_songs/71YUxDOihbL._SS500__a8nlzn.jpg>"
+        "video_link": "<https://youtu.be/fFnOfpIJL0M>"
+        
     },
     {
         "song_id": 2,
-        "video_link": "<https://youtu.be/45cYwDMibGo>",
-        "photo": "<https://res.cloudinary.com/deubd4mph/image/upload/v1657315440/figJam_songs/Beatles_-_Abbey_Road_shsgtv.jpg>"
+        "video_link": "<https://youtu.be/45cYwDMibGo>"
+       
     },
     {
         "song_id": 3,
-        "video_link": "<https://youtu.be/HNBCVM4KbUM>",
-        "photo": "<https://res.cloudinary.com/deubd4mph/image/upload/v1657315444/figJam_songs/Bob_Marley_Three_Little_Birds_cintud.jpg>"
+        "video_link": "<https://youtu.be/HNBCVM4KbUM>"
+        
     },
     {
         "song_id": 4,
-        "video_link": "<https://youtu.be/lcOxhH8N3Bo>",
-        "photo": "<https://res.cloudinary.com/deubd4mph/image/upload/v1657315448/figJam_songs/71rRdiOFzXL._SL1051__ycisxx.jpg>"
+        "video_link": "<https://youtu.be/lcOxhH8N3Bo>"
+        
     },
     {
         "song_id": 5,
-        "video_link": "<https://youtu.be/dQw4w9WgXcQ>",
-        "photo": "<https://res.cloudinary.com/deubd4mph/image/upload/v1657315443/figJam_songs/416DdbYOflL_e8xvoo.jpg>"
+        "video_link": "<https://youtu.be/dQw4w9WgXcQ>"
+       
     },
     {
         "song_id": 6,
-        "video_link": "<https://youtu.be/lDK9QqIzhwk>",
-        "photo": "<https://res.cloudinary.com/deubd4mph/image/upload/v1657315524/figJam_songs/518ef65959b13ef8b92c724fb05312cf.1000x1000x1_umemlc.jpg>"
+        "video_link": "<https://youtu.be/lDK9QqIzhwk>"
+       
     },
     {
         "song_id": 7,
-        "video_link": "<https://youtu.be/saGYMhApaH8>",
-        "photo": "<https://res.cloudinary.com/deubd4mph/image/upload/v1657315447/figJam_songs/Bad-Bunny-Un-Verano-Sin-Ti_jedlod.jpg>"
+        "video_link": "<https://youtu.be/saGYMhApaH8>"
+       
     },
     {
         "song_id": 8,
-        "video_link": "<https://youtu.be/63zEDkg351c>",
-        "photo": "<https://res.cloudinary.com/deubd4mph/image/upload/v1657574352/figJam_songs/Janet_Jackson_Love_Will_Never_Do_Without_You_riefoh.png>"
+        "video_link": "<https://youtu.be/63zEDkg351c>"
+        
     }
 ]

@@ -14,31 +14,23 @@
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-around align-center p-2">
       <img class = "fig" aria-label="figgin' cool" src = "/images/st,small,507x507-pad,600x600,f8f8f8.jpg"/>
-      <h1>
+      <h1 id = "title">
         <a href="/">FigJam</a>
       </h1>
       <nav class="display-flex flex-wrap">
         {{!-- nav links to other App pages --}}
         <a href="/" class="outline" >homepage</a>
         <a href="/songlist" class="outline">songlist</a>
-        <a href="/add-song" class="outline">add-song</a>
+        <a href="/add-song" class="outline">add song</a>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a class="outline">profile</a>
         <button class="no-button outline" id="logout">logout</button>
         <br>
         <div>
             <p> logged in as: </p>
-
             <div>
                 <h6>test@test.com</h6>
             </div>
-            {{!-- {{ users.email }} --}}
-            {{!-- {{ email }} --}}
-            {{!-- -{{ user }}- --}}
-            {{!-- {{ userData.email }} --}}
-            {{!-- {{{ user.email }}} --}}
-            {{!-- {{ user.name }} --}}
         </div>
         {{else}}
         <a href="/login" class="outline">login</a>
