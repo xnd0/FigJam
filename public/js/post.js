@@ -39,4 +39,7 @@ document.getElementById("upload_widget").addEventListener("click", function (eve
   event.preventDefault();
   myWidget.open();
 }, false);
-document.querySelector('#submitbutton').addEventListener("click", post);
+
+document.querySelector('#submitButton').addEventListener("click", post);
+
+
