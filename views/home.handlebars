@@ -8,13 +8,13 @@
 
 </head>
 <header>
-  <div class = "flex-row justify-center p-3">
+  <div class="flex-row justify-center p-3">
     <h7> A music app where you can share, comment, post, or simply listen.</h7>
   </div>
 </header>
 
 <main>
-  {{!-- <div class = "posts p-3">
+  {{!-- <div class="posts p-3">
     {{#each songs as |song| }}
     {{ song.song_name }}
     {{/each}}
@@ -22,30 +22,31 @@
   <div>
     {{#if songs.length}}
     <div class="text-center song-list">
-        <h2>FigJam Song List:</h2>
+      <h2>FigJam Song List:</h2>
 
-        {{#each songs as |song|}}
-        <div class="row mb-2 song-list outline songcard">
-            <div class="col-md-8">
-                {{!-- <h4><a href="/song/{{song.id}}">{{song.name}}</a></h4> --}}
-                {{!-- <h4>{{song_name}} by {{artist_name}}</h4> --}}
-                <h5>{{song_name}}</h5>
-                <div>by
-                    <h3>{{artist_name}}</h3>
-                </div>
+      {{#each songs as |song|}}
+      <div class="row mb-2 song-list outline songcard">
+        <div class="col-md-8">
+          {{!-- <h4><a href="/song/{{song.id}}">{{song.name}}</a></h4> --}}
+          {{!-- <h4>{{song_name}} by {{artist_name}}</h4> --}}
+          <h5>{{song_name}}</h5>
+          <div>by
+            <h3>{{artist_name}}</h3>
+          </div>
 
-            </div>
-            <div class="col-md-4">
-                <button class="btn btn-sm btn-danger" data-id="{{song.id}}">View</button>
-            </div>
         </div>
-        {{/each}}
+        <div class="col-md-4">&#127911;
+          <button class="btn btn-sm btn-danger" data-id="{{song.id}}">Listen</button>
+          <br><br>&#128172;
+          <button class="btn btn-sm btn-danger" data-id="{{song.id}}">Comment</button>
+        </div>
+      </div>
+      {{/each}}
     </div>
     {{/if}}
-</div>
+  </div>
 
 
 
 
 </main>
-
