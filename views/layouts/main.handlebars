@@ -24,8 +24,8 @@
         <a href="/add-song" class="outline">add-song</a>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile" class="outline">profile</a>
-        <button class="no-button" id="logout">logout</button>
+        <a class="outline">profile</a>
+        <button class="no-button outline" id="logout">logout</button>
         {{else}}
         <a href="/login" class="outline">login</a>
         {{/if}}
