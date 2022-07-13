@@ -31,12 +31,19 @@ router.get('/add-song', async (req, res) => {
         res.render('all', {songs});
         // res.json(songs);
 });
-// //GET a single song
-// router.get('/:id', (req, res) => {
-//     Song.findByPk(req.params.id).then((songData) =>{
-//         res.json(songData)
-//     });
-// });
+
+
+// View song list
+router.get('/songlist', async (req, res) => {
+    const songData = await Song.findAll()
+        console.log(songData);
+
+    // Serialize data so the template can read it
+    const songs = songData.map((song) => song.get({ plain: true }));
+
+        res.render('songlist', {songs});
+        // res.json(songs);
+});
 
 
 router.get('/login', (req, res) => {

@@ -26,6 +26,18 @@ header, .project:not(:last-child) {
   height: 100px;
 }
 
+
+.outline {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 6px;
+  margin: 8px;
+}
+
+.songcard {
+  background-color: #F8F8F8;
+}
+
 #footer {
   color: whitesmokes;
   text-align: center;
