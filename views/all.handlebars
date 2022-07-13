@@ -13,20 +13,17 @@
 <div class="menu-container">
   <div class="card-header col-md-12 text-center">
     <h2>
-      FigJam 
+      FigJam
     </h2>
   </div>
-    
-  {{#each songs as |song| }}
 
+  {{!-- {{#each songs as |song| }}
   {{ song.song_name }}
-
-
   {{/each}}
-<br>
-<br>
+  <br>
+  <br> --}}
 
-  <!-- This is the form for adding a new dish -->
+  <!-- Form for posting a song -->
   <div class="add-song-container">
     <h2>
       What are you listening to right now?
@@ -38,13 +35,21 @@
       <br />
       <br>
       <textarea id="song_name" name="song_name" rows="2" cols="30">
-    </textarea>
-      <br />
-      <label for="description">
-        Description:
+        </textarea>
+        <br>
+      <label for="artist_name">
+        Artist Name:
       </label>
       <br />
-      <textarea id="description" name="description" rows="5" cols="30">
+      <br>
+      <textarea id="artist_name" name="artist_name" rows="2" cols="30">
+    </textarea>
+      <br />
+      <label for="comment">
+        your comment:
+      </label>
+      <br />
+      <textarea id="comment" name="comment" rows="5" cols="30">
     </textarea>
       <br />
       <label for="username">
@@ -57,24 +62,25 @@
       <br />
       <button id="upload_widget" class="cloudinary-button">Upload YouTube URL</button>
 
-<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>  
+      <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
 
-<script type="text/javascript">  
-var myWidget = cloudinary.createUploadWidget({
-  cloudName: 'deubd4mph', 
-  uploadPreset: 'paup0jwu'}, (error, result) => { 
-    if (!error && result && result.event === "success") { 
-      console.log('Done! Here is the image info: ', result.info); 
-    }
-  }
-)
+      <script type="text/javascript">
+        var myWidget = cloudinary.createUploadWidget({
+          cloudName: 'deubd4mph',
+          uploadPreset: 'paup0jwu'
+        }, (error, result) => {
+          if (!error && result && result.event === "success") {
+            console.log('Done! Here is the image info: ', result.info);
+          }
+        }
+        )
 
-document.getElementById("upload_widget").addEventListener("click", function(){
-    myWidget.open();
-  }, false);
-</script>
-<br>
-<br>
+        document.getElementById("upload_widget").addEventListener("click", function () {
+          myWidget.open();
+        }, false);
+      </script>
+      <br>
+      <br>
       <button type="submit" value="Submit">
         Submit
       </button>
