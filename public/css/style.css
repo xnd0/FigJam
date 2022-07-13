@@ -38,6 +38,10 @@ header, .project:not(:last-child) {
   background-color: #C4B4CF;
 }
 
+.no-button{
+  background-color: #F8F8F8;
+}
+
 #footer {
   color: whitesmokes;
   text-align: center;
