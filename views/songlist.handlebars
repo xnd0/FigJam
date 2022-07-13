@@ -4,16 +4,17 @@
 
 <div>
   {{#if songs.length}}
-  <div class="col-md-6 song-list">
+  <div class="text-center song-list">
     <h3>Submitted Song List:</h3>
 
     {{#each songs as |song|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/song/{{song.id}}">{{song.name}}</a></h4>
+        {{!-- <h4><a href="/song/{{song.id}}">{{song.name}}</a></h4> --}}
+        <h4>{{song_name}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{song.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{song.id}}">View</button>
       </div>
     </div>
     {{/each}}
