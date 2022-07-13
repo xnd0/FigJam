@@ -4,8 +4,8 @@
 
 
 const router = require('express').Router();
-const Song = require('../../models/Song');
-// const { Song } = require('../../models');
+// const Song = require('../../models/Song');
+const { Song , Comment } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
 

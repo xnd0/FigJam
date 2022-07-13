@@ -17,28 +17,29 @@ const post = async (event) => {
   });
 
   if (response.ok) {
-    document.location.replace('/songs');
+    // document.location.replace('/songs');
   } else {
     alert('Failed to create project');
   }
 
-  };
-  var myWidget = cloudinary.createUploadWidget({
-  cloudName: 'deubd4mph', 
-  uploadPreset: 'paup0jwu'}, (error, result) => { 
-    if (!error && result && result.event === "success") { 
-      console.log('Done! Here is the image info: ', result.info); 
-      url = result.info.url;
-      const image = document.createElement("img");
-      image.setAttribute("src", url);
-      const songPhoto = document.querySelector(".song-photo");
-      songPhoto.append(image);
-    }
+};
+var myWidget = cloudinary.createUploadWidget({
+  cloudName: 'deubd4mph',
+  uploadPreset: 'paup0jwu'
+}, (error, result) => {
+  if (!error && result && result.event === "success") {
+    console.log('Done! Here is the image info: ', result.info);
+    url = result.info.url;
+    const image = document.createElement("img");
+    image.setAttribute("src", url);
+    const songPhoto = document.querySelector(".song-photo");
+    songPhoto.append(image);
   }
+}
 )
 
-document.getElementById("upload_widget").addEventListener("click", function(){
-    myWidget.open();
-  }, false);
-  document.querySelector('.song-form').addEventListener('submit', post);
-   
+document.getElementById("upload_widget").addEventListener("click", function (event) {
+  event.preventDefault();
+  myWidget.open();
+}, false);
+document.querySelector('#submitbutton').addEventListener("click", post);
