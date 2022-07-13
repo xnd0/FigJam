@@ -1,6 +1,3 @@
-
-
-
 let url;
 const post = async (event) => {
   event.preventDefault();
@@ -42,4 +39,7 @@ document.getElementById("upload_widget").addEventListener("click", function (eve
   event.preventDefault();
   myWidget.open();
 }, false);
+
 document.querySelector('#submitButton').addEventListener("click", post);
+
+
