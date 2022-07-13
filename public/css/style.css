@@ -26,6 +26,13 @@ header, .project:not(:last-child) {
   height: 100px;
 }
 
+
+.outline {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 8px;
+}
+
 #footer {
   color: whitesmokes;
   text-align: center;
