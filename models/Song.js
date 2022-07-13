@@ -15,6 +15,9 @@ Song.init(
         },
         artist_name:{
             type: DataTypes.STRING
+        },
+        url:{
+            type: DataTypes.STRING
         }
     },
     {
