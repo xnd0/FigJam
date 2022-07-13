@@ -26,6 +26,20 @@
         {{#if logged_in}}
         <a class="outline">profile</a>
         <button class="no-button outline" id="logout">logout</button>
+        <br>
+        <div>
+            <p> logged in as: </p>
+
+            <div>
+                <h6>test@test.com</h6>
+            </div>
+            {{!-- {{ users.email }} --}}
+            {{!-- {{ email }} --}}
+            {{!-- -{{ user }}- --}}
+            {{!-- {{ userData.email }} --}}
+            {{!-- {{{ user.email }}} --}}
+            {{!-- {{ user.name }} --}}
+        </div>
         {{else}}
         <a href="/login" class="outline">login</a>
         {{/if}}
