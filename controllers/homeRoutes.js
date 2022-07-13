@@ -5,18 +5,20 @@
 
 const router = require('express').Router()
 // const Song = require('../models/song.js');
-const Song = require('../models/Song');
-
+// const Song = require('../models/Song');
+const { Song , Comment } = require('../models');
 
 // GET all songs 
 router.get('/', async (req, res) => {
-    const songData = await Song.findAll()
+    const songData = await Song.findAll({
+        include : [{ model: Comment }]
+    })
     console.log(songData);
 
     // Serialize data so the template can read it
     const songs = songData.map((song) => song.get({ plain: true }));
 
-    res.render('home', { songs });
+    res.render('home', { songs , logged_in: req.session.logged_in });
     // res.json(songs);
 });
 
@@ -28,7 +30,7 @@ router.get('/add-song', async (req, res) => {
     // Serialize data so the template can read it
     const songs = songData.map((song) => song.get({ plain: true }));
 
-        res.render('all', {songs});
+        res.render('all', { songs , logged_in: req.session.logged_in });
         // res.json(songs);
 });
 
@@ -41,7 +43,7 @@ router.get('/songlist', async (req, res) => {
     // Serialize data so the template can read it
     const songs = songData.map((song) => song.get({ plain: true }));
 
-        res.render('songlist', {songs});
+        res.render('songlist', { songs, logged_in: req.session.logged_in });
         // res.json(songs);
 });
 
