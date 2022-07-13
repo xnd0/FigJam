@@ -13,3 +13,11 @@
   </div>
 </header>
 
+<main>
+  <div class = "posts p-3">
+    {{#each songs as |song| }}
+    {{ song.song_name }}
+    {{/each}}
+  </div>
+</main>
+
