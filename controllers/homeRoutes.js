@@ -4,8 +4,6 @@
 
 
 const router = require('express').Router()
-// const Song = require('../models/song.js');
-// const Song = require('../models/Song');
 const { Song , Comment, Video } = require('../models');
 
 // GET all songs 
