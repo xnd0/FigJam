@@ -10,5 +10,8 @@ choose from so users can enjoy the audio-visual</p>
 <h1>Technologies</h1>
 <p>Javascript, Handlebars, CSS, Node, Express, Sequelize</p>
 
+<h1>Screenshots</h1>
+https://github.com/xnd0/FigJam/issues/37#issue-1303919816
+
 <h1>Links</h1>
 https://github.com/xnd0/FigJam

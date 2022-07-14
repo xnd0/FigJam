@@ -42,3 +42,4 @@ document.getElementById("upload_widget").addEventListener("click", function (eve
 }, false);
 
 document.querySelector('.song-form').addEventListener("submit", post);
+

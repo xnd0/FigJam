@@ -20,11 +20,13 @@ router.get('/', async (req, res) => {
     // Serialize data so the template can read it
     const videos = videoData.map(video => video.get({plain: true }));
     const songs = songData.map((song) => song.get({ plain: true }));
+
     songs.forEach(song => {
         song.video_link = videos.find(video => video.song_id === song.id)?.video_link;
     })
     console.log(songs);
-    res.render('home', { songs , logged_in: req.session.logged_in });
+    res.render('home', { songs , email: req.session.email, logged_in: req.session.logged_in });
+    // res.json(songs);
 });
 
 
