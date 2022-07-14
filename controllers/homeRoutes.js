@@ -24,7 +24,6 @@ router.get('/', async (req, res) => {
     })
     console.log(songs);
     res.render('home', { songs , email: req.session.email, logged_in: req.session.logged_in });
-    // res.json(songs);
 });
 
 
@@ -36,7 +35,6 @@ router.get('/add-song', async (req, res) => {
     const songs = songData.map((song) => song.get({ plain: true }));
 
         res.render('all', { songs , logged_in: req.session.logged_in });
-        // res.json(songs);
 });
 
 
@@ -49,7 +47,6 @@ router.get('/songlist', async (req, res) => {
     const songs = songData.map((song) => song.get({ plain: true }));
 
         res.render('songlist', { songs, logged_in: req.session.logged_in });
-        // res.json(songs);
 });
 
 

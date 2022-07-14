@@ -1,6 +1,8 @@
+//post code
 let url;
 const post = async (event) => {
   event.preventDefault();
+  //query selectors
   document.querySelector(".song-form .sub-button").setAttribute("disabled", "");
   const song_name = document.querySelector('#song_name').value.trim();
   const artist_name = document.querySelector('#artist_name').value.trim();
@@ -21,6 +23,7 @@ const post = async (event) => {
   }
   document.querySelector(".song-form .sub-button").removeAttribute("disabled");
 };
+//widget to upload an image from cloudinary
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'deubd4mph',
   uploadPreset: 'paup0jwu'
