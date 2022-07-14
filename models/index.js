@@ -14,5 +14,7 @@ Song.hasMany(Comment, {
     foreignKey: 'song_id'
   });
 
+  
+
 
 module.exports = {User, Video, Song, Comment}

@@ -13,9 +13,6 @@ Video.init(
         video_link:{
             type: DataTypes.STRING
         },
-        photo:{
-            type: DataTypes.STRING
-        },
         song_id: {
             type: DataTypes.INTEGER,
             references: {
