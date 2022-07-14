@@ -6,23 +6,25 @@
 const router = require('express').Router()
 // const Song = require('../models/song.js');
 // const Song = require('../models/Song');
-const { Song , Comment } = require('../models');
+const { Song , Comment, Video } = require('../models');
 
 // GET all songs 
 router.get('/', async (req, res) => {
     const songData = await Song.findAll({
         include : [{ model: Comment }]
     })
-    console.log(songData);
+    const videoData = await Video.findAll({
+
+    });
 
     // Serialize data so the template can read it
-
+    const videos = videoData.map(video => video.get({plain: true }));
     const songs = songData.map((song) => song.get({ plain: true }));
-    console.log("-----------------------------");
+    songs.forEach(song => {
+        song.video_link = videos.find(video => video.song_id === song.id)?.video_link;
+    })
     console.log(songs);
-    console.log(songs[0].comments);
     res.render('home', { songs , logged_in: req.session.logged_in });
-    // res.json(songs);
 });
 
 

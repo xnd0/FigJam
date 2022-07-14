@@ -70,6 +70,16 @@ h2 {
   font-family: 'Marker Felt', fantasy;
 }
 
-#bulk {
-  /* font-family: 'Marker Felt', fantasy; */
+.video_iframe {
+  width: 300px;
+  height: 200px;
+  display: inline-block;
+}
+
+.song_content {
+  display: flex;
+  /* x-axis */
+  justify-content: center;
+    /* y-axis */
+  align-items: center;
 }

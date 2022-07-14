@@ -1,6 +1,7 @@
 let url;
 const post = async (event) => {
   event.preventDefault();
+  document.querySelector(".song-form .sub-button").setAttribute("disabled", "");
   const song_name = document.querySelector('#song_name').value.trim();
   const artist_name = document.querySelector('#artist_name').value.trim();
   const comment_text = document.querySelector('#comment_text').value.trim();
@@ -18,7 +19,7 @@ const post = async (event) => {
   } else {
     alert('Failed to create project');
   }
-
+  document.querySelector(".song-form .sub-button").removeAttribute("disabled");
 };
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'deubd4mph',
@@ -39,4 +40,5 @@ document.getElementById("upload_widget").addEventListener("click", function (eve
   event.preventDefault();
   myWidget.open();
 }, false);
-document.querySelector('#submitButton').addEventListener("click", post);
+
+document.querySelector('.song-form').addEventListener("submit", post);

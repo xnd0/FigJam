@@ -28,7 +28,11 @@
             <h3>{{artist_name}}</h3>
           </div>
           <img src={{ url }}>
-          <br>
+          <div class = "song_content">
+            <iframe class = "video_iframe"
+            src="{{ song.video_link }}" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
           <div id = "special">
             {{#each comments as |comment| }}
             <p>"{{comment.comment_text}}"</p>
